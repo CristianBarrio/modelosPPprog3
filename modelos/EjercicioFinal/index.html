@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>backend</title>
+</head>
+<body>
+    <form action="http://localhost/prog3/clase3/EjercicioFinal/nexo_poo_foto.php" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="accion" value="agregar">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre"required><br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" required><br>
+        <label for="legajo">Legajo:</label>
+        <input type="text" name="legajo" required pattern=".{6}" title="El legajo debe tener 6 caracteres"><br>
+        <input type="file" name="foto" id="foto" required/>
+        <br>
+        <input type="submit" value="Guardar Alumno"><br><br>
+    </form>
+    
+    <form action="http://localhost/prog3/clase3/EjercicioFinal/nexo_poo_foto.php" method="get">
+        <input type="hidden" name="accion" value="listar">
+        <input type="submit" value="Listar Alumnos">
+    </form>
+
+    <form action="http://localhost/prog3/clase3/EjercicioFinal/nexo_poo_foto.php" method="get">
+        <input type="hidden" name="accion" value="listar_pdf">
+        <input type="submit" value="Mostrar pdf">
+    </form>
+    
+    <form action="http://localhost/prog3/clase3/EjercicioFinal/nexo_poo_foto.php" method="post">
+        <input type="hidden" name="accion" value="listar_objetos">
+        <input type="submit" value="Listar Objetos">
+    </form>
+
+    <form action="http://localhost/prog3/clase3/EjercicioFinal/nexo_poo_foto.php" method="post">
+        <input type="hidden" name="accion" value="listar_tabla">
+        <input type="submit" value="Listar Tabla">
+    </form>
+
+    <form action="http://localhost/prog3/clase3/EjercicioFinal/nexo_poo_foto.php" method="post">
+        <br>
+        <input type="hidden" name="accion" value="verificar">
+        <label for="legajo">Legajo:</label>
+        <input type="text" name="legajo" required pattern=".{6}" title="El legajo debe tener 6 caracteres"><br>
+        <input type="submit" value="Buscar por legajo">
+    </form>
+
+    <form action="http://localhost/prog3/clase3/EjercicioFinal/nexo_poo_foto.php" method="post">
+        <br>
+        <input type="hidden" name="accion" value="borrar">
+        <label for="legajo">Legajo:</label>
+        <input type="text" name="legajo" required pattern=".{6}" title="El legajo debe tener 6 caracteres"><br>
+        <input type="submit" value="Eliminar alumno">
+    </form>
+
+    <form action="http://localhost/prog3/clase3/EjercicioFinal/nexo_poo_foto.php" method="post">
+        <br>
+        <input type="hidden" name="accion" value="obtener">
+        <label for="legajo">Legajo:</label>
+        <input type="text" name="legajo" required pattern=".{6}" title="El legajo debe tener 6 caracteres"><br>
+        <input type="submit" value="Obtener alumno por legajo">
+    </form>
+
+    <form action="http://localhost/prog3/clase3/EjercicioFinal/nexo_poo_foto.php" method="post" enctype="multipart/form-data">
+        <br>
+        <input type="hidden" name="accion" value="modificar">
+        <label for="nombre">Nuevo nombre:</label>
+        <input type="text" name="nombre"required><br>
+        <label for="apellido">Nuevo apellido:</label>
+        <input type="text" name="apellido" required><br>
+        <label for="legajo">Legajo:</label>
+        <input type="text" name="legajo" required pattern=".{6}" title="El legajo debe tener 6 caracteres"><br>
+        <input type="file" name="foto" id="foto" required/>
+        <br>
+        <input type="submit" value="Modificar alumno">
+    </form>
+
+</body>
+</html>
